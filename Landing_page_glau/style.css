@@ -1,0 +1,1121 @@
+/* =========================================================
+   RESET GLOBAL
+   Remove espaçamentos padrão do navegador e padroniza
+   o cálculo de largura/altura dos elementos
+========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Rolagem suave ao clicar em links internos */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Faz imagens nunca ultrapassarem o container */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a,
+button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* =========================================================
+   VARIÁVEIS GLOBAIS
+   Centraliza todas as cores do projeto em um único lugar
+========================================================= */
+:root {
+
+    /* =====================
+       CORES PRINCIPAIS
+    ===================== */
+
+    /* Rosa principal utilizado em botões,
+       destaques e efeitos */
+    --primary: #e91e63;
+
+    /* Rosa mais suave para detalhes visuais */
+    --primary-soft: #ff85a1;
+
+
+    /* =====================
+       CORES DE FUNDO
+    ===================== */
+
+    /* Fundo principal do site */
+    --secondary: #fdfaf9;
+
+    /* Branco utilizado em cards e blocos */
+    --bg-soft: #ffffff;
+
+    /* Fundo rosado suave usado em seções */
+    --accent: #f8ecee;
+
+
+    /* =====================
+       TEXTOS
+    ===================== */
+
+    /* Cor principal dos textos */
+    --text: #332d2d;
+
+
+    /* =====================
+       FOOTER
+    ===================== */
+
+    /* Fundo principal do rodapé */
+    --footer: #2b2627;
+
+    /* Cor dos textos do rodapé */
+    --footer-text: #d1c7c8;
+
+    /* Linha divisória inferior do footer */
+    --footer-bottom: #413a3b;
+}
+
+/* =========================================================
+   ESTILOS BASE
+========================================================= */
+
+/* Configurações globais do corpo da página */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+    background: var(--secondary);
+    line-height: 1.6;
+    overflow-x: hidden;
+
+    text-rendering: optimizeLegibility;
+}
+
+/* SIDEBAR SOCIAL */
+
+.social-sidebar {
+    position: fixed;
+
+    right: 10px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+
+    z-index: 999;
+}
+
+.social-sidebar a {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--primary);
+
+    border: 1px solid var(--primary);
+
+    text-decoration: none;
+
+    color: var(--bg-soft);
+
+    font-size: 1.2rem;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        color .3s ease;
+}
+
+.social-sidebar a:hover {
+    transform: translateY(-5px);
+
+    background: var(--primary);
+
+    color: var(--bg-soft);
+}
+
+/* =========================================
+   SCROLLBAR PERSONALIZADA
+========================================= */
+
+/* largura */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* fundo da barra */
+::-webkit-scrollbar-track {
+    background: var(--primary);
+}
+
+/* parte que desliza */
+::-webkit-scrollbar-thumb {
+    background: var(--bg-soft);
+    border-radius: 20px;
+
+    border: 1px solid var(--primary);
+}
+
+/* hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-soft);
+}
+
+/* Espaçamento padrão entre seções */
+section {
+    padding: 80px 0;
+}
+
+/* Container centralizador do conteúdo */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* =========================================================
+   HEADER / TOPO
+========================================================= */
+
+/* Cabeçalho fixo no topo da página */
+.header {
+    background: var(--bg-soft);
+    border-bottom: 1px solid var(--accent);
+
+    /* Mantém o menu visível durante o scroll */
+    position: sticky;
+    top: 0;
+
+    /* Mantém acima dos outros elementos */
+    z-index: 1000;
+}
+
+/* Organização interna do header */
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Área da logo */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo da imagem da logo */
+.logo img {
+    height: 60px;
+    width: auto;
+
+    /* Mantém proporção da imagem */
+    object-fit: contain;
+
+    /* Suaviza animações */
+    transition: 0.3s ease;
+
+    /* Pequena sombra para profundidade */
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.05));
+}
+
+/* Efeito ao passar o mouse */
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+/* NAV BAR */
+.nav {
+    list-style: none;
+
+    display: flex;
+
+    gap: 12px;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+}
+
+/* Links do menu */
+.nav a {
+    display: inline-block;
+    white-space: nowrap;
+
+    text-decoration: none;
+
+    background: var(--primary);
+
+    color: var(--bg-soft);
+
+    border: 1px solid var(--primary);
+
+    text-transform: uppercase;
+
+    font-size: 0.8rem;
+
+    font-weight: 500;
+
+    letter-spacing: 0.5px;
+
+    padding: 8px 14px;
+
+    border-radius: 999px;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        transform .3s ease;
+}
+
+/* Hover */
+.nav a:hover {
+    background: var(--bg-soft);
+
+    color: var(--primary);
+
+    transform: translateY(-2px);
+}
+
+/* Focus acessibilidade */
+.nav a:focus,
+.btn:focus {
+    outline: 2px solid var(--primary);
+
+    outline-offset: 4px;
+}
+
+/* =========================================================
+   HERO SECTION
+   Primeira seção de destaque do site
+========================================================= */
+
+.hero {
+
+    /* Fundo composto por imagem + camada escura */
+    background:
+        linear-gradient(rgba(20, 10, 15, 0.65),
+            rgba(20, 10, 15, 0.45)),
+        url('img/hero-estetica.webp') top/cover no-repeat;
+    background-position: center;
+    /* Efeito parallax no desktop */
+    background-attachment: fixed;
+
+    text-align: center;
+    color: white;
+
+    position: relative;
+
+    /* Centralização do conteúdo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Espaçamento responsivo */
+    padding-block: clamp(100px, 15vw, 200px);
+}
+
+/* Título principal */
+.hero h1 {
+    font-size: clamp(2rem, 8vw, 4.5rem);
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.1;
+
+    /* Melhora leitura sobre a imagem */
+    text-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.45);
+    /* Animação do título */
+    animation: heroTitle 1.2s ease forwards;
+}
+
+/* Animação do texto */
+.hero p {
+    animation: heroText 1.5s ease forwards;
+    /* Texto complementar */
+    max-width: 650px;
+    margin: 0 auto 30px;
+
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.92);
+
+    text-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.35);
+}
+
+h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+
+    text-align: center;
+
+    margin-bottom: 50px;
+
+    color: var(--text);
+
+    line-height: 1.2;
+}
+
+/* =========================================================
+   ANIMAÇÕES DO HERO
+========================================================= */
+
+/* Título sobe aparecendo */
+@keyframes heroTitle {
+    from {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Texto sobe suavemente */
+@keyframes heroText {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Botão sobe suavemente */
+@keyframes heroBtn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================================
+   SEÇÃO SOBRE
+========================================================= */
+
+/* Fundo branco da seção */
+.sobre {
+    background: var(--bg-soft);
+}
+
+/* Grid principal */
+.sobre-bloco {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+/* Inverte ordem no desktop */
+.sobre-bloco.invertido .sobre-texto {
+    order: 2;
+}
+
+.sobre-bloco.invertido .sobre-img {
+    order: 1;
+}
+
+/* Título */
+.sobre-texto h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+/* Parágrafos */
+.sobre-texto p {
+    margin-bottom: 15px;
+}
+
+/* =========================================================
+   ANIMAÇÕES AO ROLAR A PÁGINA
+========================================================= */
+
+/* Texto vindo da esquerda */
+.sobre-texto {
+    animation: textoReveal 1s linear forwards;
+}
+
+/* Imagem vindo da direita */
+.sobre-img {
+    animation: imagemReveal 1s linear forwards;
+
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+/* Animação do texto */
+@keyframes textoReveal {
+    from {
+        opacity: 0;
+        filter: blur(10px);
+        transform: translateX(-120px);
+    }
+
+    to {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0);
+    }
+}
+
+/* Animação da imagem */
+@keyframes imagemReveal {
+    from {
+        opacity: 0;
+        filter: blur(10px);
+        transform: translateX(120px);
+    }
+
+    to {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0);
+    }
+}
+
+/* Imagem da seção sobre */
+.sobre-img img {
+    width: 100%;
+
+    /* Mantém proporção elegante */
+    aspect-ratio: 4 / 3;
+
+    border-radius: 20px;
+
+    object-fit: cover;
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================================
+   SERVIÇOS
+========================================================= */
+
+/* Fundo da seção */
+.servicos {
+    background: var(--accent);
+}
+
+/* Grid responsivo */
+.grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(240px, 1fr));
+
+    gap: 20px;
+}
+
+/* Card individual */
+.card {
+    background: var(--bg-soft);
+
+    border-radius: 15px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+}
+
+/* Camada colorida do hover */
+.card::after {
+    content: '';
+
+    position: absolute;
+    inset: 0;
+
+    background: var(--primary);
+
+    opacity: 0;
+
+    transition: opacity .4s ease;
+
+    z-index: 0;
+}
+
+/* Movimento do card */
+.card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 20px 40px rgba(233, 30, 99, 0.18);
+}
+
+/* Mantém conteúdo acima do overlay */
+.card>* {
+    position: relative;
+    z-index: 1;
+}
+
+/* Mostra overlay rosa */
+.card:hover::after {
+    opacity: 1;
+}
+
+/* Texto branco no hover */
+.card:hover h4,
+.card:hover p {
+    color: white;
+}
+
+/* Transição de cor */
+.card h4,
+.card p {
+    transition: color .4s ease;
+    padding-inline: 25px;
+}
+
+/* Título do card */
+.card h4 {
+    padding-top: 20px;
+    margin-bottom: 10px;
+
+    font-weight: 700;
+    font-size: 1.5rem;
+
+    text-align: center;
+
+    line-height: 1.7rem;
+}
+
+/* Texto do card */
+.card p {
+    padding-bottom: 25px;
+
+    text-align: center;
+
+    margin-top: auto;
+
+    font-size: 0.9rem;
+}
+
+/* Imagem do card */
+.card img {
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+
+    transition:
+        transform .4s ease,
+        filter .4s ease;
+}
+
+/* Zoom da imagem */
+.card:hover img {
+    transform: scale(1.08);
+
+    filter: brightness(0.85);
+}
+
+/* Espaçamento entre categorias */
+.categoria {
+    margin-bottom: 60px;
+}
+
+/* Título da categoria */
+.categoria h3 {
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+}
+
+/* =========================================================
+   DEPOIMENTOS
+========================================================= */
+
+/* Fundo branco */
+.depoimentos {
+    background: var(--bg-soft);
+}
+
+/* Grid responsivo */
+.depoimentos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Card de depoimento */
+.depoimento {
+    background: var(--secondary);
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    border: none;
+
+    font-style: italic;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.05);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+/* Hover do depoimento */
+.depoimento:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Área do cliente */
+.cliente {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 10px;
+}
+
+/* Foto do cliente */
+.cliente img {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+/* Nome do cliente */
+.cliente strong {
+    display: block;
+    font-size: 0.95rem;
+}
+
+/* Cargo/descrição */
+.cliente span {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+/* Estrelas de avaliação */
+.estrelas {
+    color: #ffc107;
+    margin-bottom: 10px;
+}
+
+/* =========================================================
+   CONTATO
+========================================================= */
+
+/* Fundo da seção */
+.contato {
+    background:
+        linear-gradient(135deg,
+            var(--accent),
+            var(--secondary));
+
+    color: var(--text);
+}
+
+/* Grid responsivo */
+.contato-grid {
+    display: grid;
+
+    gap: 40px;
+
+    align-items: center;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(320px, 1fr));
+}
+
+/* Título */
+.contato-texto h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Texto */
+.contato-texto p {
+    margin-bottom: 25px;
+    max-width: 500px;
+}
+
+/* Caixa de informações */
+.contato-info {
+    background: rgba(255, 255, 255, 0.08);
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    /* Efeito vidro */
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Espaçamento dos itens */
+.info-item {
+    margin-bottom: 25px;
+}
+
+/* Título dos itens */
+.info-item strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* =========================================================
+   BOTÕES
+========================================================= */
+
+/* Botão principal */
+.btn {
+    display: inline-block;
+
+    background: var(--primary);
+
+    color: #fff;
+
+    padding: 14px 35px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        background .3s ease,
+        color .3s ease;
+
+    position: relative;
+
+    overflow: hidden;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 8px 20px rgba(233, 30, 99, 0.2);
+}
+
+/* Hover do botão */
+.btn:hover {
+    transform: scale(1.05);
+
+    box-shadow:
+        0 10px 25px rgba(233, 30, 99, 0.3);
+    color: var(--primary);
+    background: var(--bg-soft);
+    border: 1px solid var(--primary);
+}
+
+/* Botão dentro da seção contato */
+.contato .btn {
+    background: var(--primary);
+    color: var(--bg-soft);
+}
+
+/* Hover específico */
+.contato .btn:hover {
+    background: var(--bg-soft);
+    color: var(--primary);
+
+    border: 1px solid #e91e63;
+}
+
+/* =========================================================
+   FOOTER / RODAPÉ
+========================================================= */
+
+/* Fundo do footer */
+.footer {
+    background: var(--footer);
+
+    color: #fff;
+
+    padding: 60px 0 20px;
+}
+
+/* Grid do footer */
+.footer-grid {
+    display: grid;
+    align-items: start;
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 40px;
+}
+
+/* Títulos do footer */
+.footer h4 {
+    margin-bottom: 15px;
+}
+
+/* Texto do footer */
+.footer p {
+    color: var(--footer-text);
+    font-size: 0.9rem;
+}
+
+/* Remove bullets */
+.footer-links ul {
+    list-style: none;
+}
+
+/* Links do footer */
+.footer-links a {
+    color: var(--footer-text);
+
+    text-decoration: none;
+
+    display: block;
+
+    margin-bottom: 8px;
+}
+
+/* Hover dos links */
+.footer-links a:hover {
+    color: #fff;
+}
+
+/* Ícones de contato */
+.footer-contato i {
+    color: var(--bg-soft);
+    margin-right: 8px;
+}
+
+/* Área dos ícones sociais */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+/* Botões sociais */
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    color: #fff;
+
+    font-size: 18px;
+
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        color .3s ease;
+}
+
+/* Hover dos ícones */
+.social-icons a:hover {
+    background: var(--primary);
+
+    transform: translateY(-4px);
+}
+
+/* Parte inferior do footer */
+.footer-bottom {
+    border-top: 1px solid var(--footer-bottom);
+
+    margin-top: 40px;
+
+    padding-top: 20px;
+
+    text-align: center;
+
+    color: #aaa;
+
+    font-size: 0.8rem;
+}
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .sobre-texto,
+    .contato-texto {
+        text-align: center;
+    }
+
+    .card img {
+        height: 200px;
+    }
+
+    .header .container {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 15px 0;
+    }
+
+    .logo img {
+        height: 55px;
+    }
+
+    .nav {
+        justify-content: center;
+
+        gap: 10px;
+    }
+
+    .nav a {
+        padding: 8px 14px;
+
+        font-size: 0.85rem;
+    }
+
+    /* Ajuste do hero no mobile */
+    .hero {
+        padding: 80px 20px;
+
+        /* Remove parallax no celular */
+        background-attachment: scroll;
+    }
+
+    /* Grid vira coluna única */
+
+    .sobre-bloco {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+    }
+
+    /* remove inversão no mobile */
+    .sobre-bloco.invertido .sobre-texto,
+    .sobre-bloco.invertido .sobre-img {
+        order: initial;
+    }
+
+    /* respiro visual no mobile */
+    .sobre-img img {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    /* Centraliza texto */
+    .contato-texto p {
+        margin: 0 auto 25px;
+    }
+
+    /* Centraliza logo do footer */
+    .footer-brand {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: center;
+    }
+
+    /* Ajusta imagem da logo */
+    .footer-brand img {
+        margin: 0 auto 15px;
+        margin-bottom: 15px;
+        height: 90px;
+    }
+
+    /* Centraliza ícones sociais */
+    .footer-social .social-icons {
+        justify-content: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    /* Contato em coluna única */
+    .contato-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .social-sidebar {
+        display: none;
+    }
+}
+
+/* =========================================================
+   CELULARES PEQUENOS
+========================================================= */
+
+@media (max-width: 480px) {
+
+    /* Reduz título principal */
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    /* Aproxima links do menu */
+    .nav {
+        gap: 8px;
+    }
+}
+
+@media (max-width: 360px) {
+
+    .nav {
+        gap: 5px;
+    }
+
+    .nav a {
+        padding: 6px 10px;
+
+        font-size: 0.75rem;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+}

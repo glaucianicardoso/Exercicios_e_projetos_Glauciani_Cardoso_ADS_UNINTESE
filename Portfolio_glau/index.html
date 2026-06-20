@@ -1,0 +1,240 @@
+<!DOCTYPE html> <!--Avisa ao navegador que o documento usa a versão mais recente do HTML (HTML5).-->
+<html lang="pt-br"> <!--: Inicia o documento e define o idioma principal da página-->
+
+<head> <!--Abre a área de configurações do site, onde ficam informações não visíveis na página.-->
+    <meta charset="UTF-8">
+    <!--Configura a codificação de caracteres para aceitar acentos, cedilhas e emojis corretamente.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Torna o site responsivo, ajustando a largura da página ao tamanho da tela do celular ou computador.-->
+
+    <title>Glauciani Cardoso | Desenvolvedora Front-end & Web</title>
+    <!--Define o texto que aparece na aba do navegador e nos resultados do Google.-->
+
+    <meta name="description"
+        content="Portfólio de Glauciani Cardoso, desenvolvedora front-end focada em interfaces modernas, responsivas e acessíveis. Conheça meus projetos e vamos trabalhar juntos!">
+    <!--Define o resumo do site que o Google exibe abaixo do título na busca (SEO).-->
+
+    <!-- Open Graph para Redes Sociais -->
+    <meta property="og:title" content="Glauciani Cardoso | Desenvolvedora Front-end & Web">
+    <meta property="og:description"
+        content="Portfólio de Glauciani Cardoso, desenvolvedora front-end focada em criar interfaces modernas e acessíveis.">
+    <meta property="og:image" content="URL_foto_portfolio.jpg">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="css/style.css">
+    <!--Conecta o arquivo CSS local para aplicar os estilos visuais e cores na página.-->
+
+    <link rel="icon" type="image/x-icon" href="icon/favicon.ico">
+    <!--Conecta o arquivo de ícone (favicon) que aparece na aba do navegador.-->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!--Conecta a biblioteca externa Font Awesome para permitir o uso de ícones prontos.-->
+</head> <!--Fecha a área de configurações da página.-->
+
+<body>
+    <div class="page-bg">
+        <div class="social-sidebar">
+
+            <a href="https://www.github.com" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+
+            <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+
+        </div>
+
+        <div class="container">
+
+            <!-- NAVBAR -->
+            <header class="nav">
+
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="img/logo.webp" alt="Logo Glauciani Cardoso">
+                    </a>
+                </div>
+
+                <nav class="nav-links" aria-label="Menu principal">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="projects.html">Projetos</a>
+                    <a href="info.html">Info</a>
+                    <a href="contact.html">Contato</a>
+                </nav>
+
+            </header>
+
+            <main>
+
+                <!-- HERO -->
+                <section class="hero">
+
+                    <h1 class="sr-only">
+                        Glauciani Cardoso é Desenvolvedora Front-end
+                    </h1>
+
+                    <div class="quote-box">
+
+                        <div class="corner top-left"></div>
+                        <div class="corner bottom-right"></div>
+
+                        <p>
+                            Olá! Seja bem-vindo(a), me chamo <span>GLAUCIANI CARDOSO</span>.<br>
+
+                            Sou desenvolvedora web atualmente focada em criar interfaces
+                            responsivas e acessíveis usando <span>HTML & CSS</span>.
+                        </p>
+
+                    </div>
+
+                    <div class="hero-actions">
+                        <a href="projects.html" class="btn-primary">
+                            Conheça meu trabalho
+                        </a>
+                    </div>
+
+                </section>
+
+                <!-- SKILLS -->
+                <section class="skills">
+
+                    <div class="section-title">
+                        <span class="label">MINHA STACK</span>
+                        <h2>Tecnologias & Habilidades</h2>
+                    </div>
+
+                    <div class="skills-grid">
+
+                        <div class="card">
+                            <i class="fab fa-html5" aria-hidden="true"></i>
+                            <p>HTML5</p>
+                        </div>
+
+                        <div class="card">
+                            <i class="fab fa-css3-alt" aria-hidden="true"></i>
+                            <p>CSS3</p>
+                        </div>
+
+                        <div class="card">
+                            <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                            <p>Responsivo</p>
+                        </div>
+
+                        <div class="card">
+                            <i class="fas fa-layer-group" aria-hidden="true"></i>
+                            <p>Flex/Grid</p>
+                        </div>
+
+                        <div class="card">
+                            <i class="fab fa-git-alt" aria-hidden="true"></i>
+                            <p>Git</p>
+                        </div>
+
+                        <div class="card">
+                            <i class="fab fa-github" aria-hidden="true"></i>
+                            <p>GitHub</p>
+                        </div>
+
+                        <div class="card" hidden>
+                            <i class="fab fa-figma" aria-hidden="true"></i>
+                            <p>Figma</p>
+                        </div>
+
+                        <div class="card" hidden>
+                            <i class="fas fa-paint-brush" aria-hidden="true"></i>
+                            <p>UI Design</p>
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- PROJETOS EM DESTAQUE -->
+                <section class="featured-projects">
+
+                    <div class="projects-header">
+
+                        <div>
+                            <span class="label">PORTFÓLIO</span>
+                            <h2>Projetos em Destaque</h2>
+                        </div>
+
+                        <a href="projects.html" class="view-all btn-secondary">
+                            Ver todos os projetos
+                            <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+
+                    </div>
+
+                    <div class="projects-grid">
+
+                        <!-- Projeto 1 -->
+                        <article class="project">
+
+                            <a href="projects.html" class="project-link">
+
+                                <img src="img/landing page.webp" alt="Preview da Landing Page">
+
+                            </a>
+
+                        </article>
+
+                        <!-- Projeto 2 -->
+                        <article class="project">
+
+                            <a href="projects.html" class="project-link">
+
+                                <img src="img/em_breve.png" alt="Preview da Landing Page responsiva">
+
+                            </a>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+            </main>
+
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <p>
+                &copy; 2026 Glauciani Cardoso.
+                Desenvolvido com
+                <i class="fas fa-heart heart-icon" aria-hidden="true"></i>
+                e
+                <i class="fas fa-coffee coffee-icon" aria-hidden="true"></i>
+            </p>
+
+            <div class="socials">
+
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+</body>
+
+</html>
