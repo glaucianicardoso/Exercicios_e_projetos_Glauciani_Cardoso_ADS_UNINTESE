@@ -2,7 +2,7 @@
 
 Criação de uma página de portfolio pessoal elaborado na Escola de Programadores Nível 1, da Unintese.
 
-## Tecnologias usadas inicialmente na página
+## Tecnologias usadas neste portfolio
 - HTML5
 - CSS3
 
