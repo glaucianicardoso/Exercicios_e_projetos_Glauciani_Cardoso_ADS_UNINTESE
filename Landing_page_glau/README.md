@@ -1,17 +1,17 @@
-# Landing Page - Clínica Estética
+# Landing Page - Clínica Estética - Nível 1 da Escola de Programadores
 
 Criei uma landing page para uma clínica de estética fictícia 
 
 ## Objetivo
-Praticar construção de landing pages modernas e responsivas na Escola de Programadores Nível 1, além de aplicar conceitos de Git e GitHub para gerenciar e armazenar projetos.
+Desenvolver habilidades de desenvolvimento web criando uma landing page acessível e responsiva na Escola de Programadores Nível 1, além de aplicar conceitos de Git e GitHub para gerenciar e armazenar os arquivos
 
 ## Funcionalidades
-- Layout responsivo
+- layout responsivo
 - Hero section
-- Sobre
-- Sessão de serviços
-- Depoimentos
-- Contato
+- Sessão Sobre
+- Sessão de Serviços
+- Sessão de Depoimentos
+- Sessão de Contato
 
 ## Tecnologias usadas
 - HTML5

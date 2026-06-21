@@ -1,6 +1,6 @@
-# Exercícios Javascript
+# Exercícios Javascript - NÍVEL 2 da Escola de Programadores
 
-Resolução de exercícios de Javascript no Visual Studio Code  
+Pasta destinada a armazenar a resolução dos exercícios de Javascript desenvolvida no Visual Studio Code nas aulas de Nivel 2 da Escola de Programadores do Curso de ADS da Unintese
 
 ## Objetivo
-Praticar a linguagem JavaScript durante as aulas da Escola de Programadores - Nível 2, além de aplicar conceitos de Git e GitHub para gerenciar e armazenar projetos.
+Praticar a linguagem JavaScript a partir de exercícios solicitados pelo prof., além de aplicar os conceitos de Git e GitHub para gerenciar e armazenar arquivos
