@@ -7,4 +7,4 @@ Criação de uma página de portfolio pessoal elaborado na Escola de Programador
 - CSS3
 
 ## Objetivo
-Desenvolver uma página com boa experiência do usuário, com responsividade, e contendo os seguintes elementos estruturais: Home + Projetos + Sobre + Contato.
+Desenvolver uma página com boa experiência do usuário, responsividade, e contendo os seguintes elementos estruturais: Home + Projetos + Sobre + Contato.
