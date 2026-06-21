@@ -1,4 +1,4 @@
-# Projeto de Portfólio Pessoal 
+# Projeto de Portfólio Pessoal da Glauci
 
 Criação de uma página de portfolio pessoal elaborado na Escola de Programadores Nível 1, da Unintese.
 
