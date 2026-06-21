@@ -1,10 +1,10 @@
-# Portfólio Pessoal
+# Projeto de Portfólio Pessoal 
 
-Projeto de portfólio para apresentação de projetos e habilidades.
+Criação de uma página de portfolio pessoal elaborado na Escola de Programadores Nível 1, da Unintese.
 
-## Tecnologias
+## Tecnologias usadas inicialmente na página
 - HTML5
 - CSS3
 
 ## Objetivo
-Desenvolver uma interface pessoal moderna e responsiva.
+Desenvolver uma página com boa experiência do usuário, com responsividade, e contendo os seguintes elementos estruturais: Home + Projetos + Sobre + Contato.
