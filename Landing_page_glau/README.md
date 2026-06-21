@@ -1,17 +1,18 @@
 # Landing Page - Clínica Estética
 
-Projeto desenvolvido com HTML5 e CSS3.
+Criei uma landing page para uma clínica de estética fictícia 
 
 ## Objetivo
-Praticar construção de landing pages modernas e responsivas.
+Praticar construção de landing pages modernas e responsivas na Escola de Programadores Nível 1, além de aplicar conceitos de Git e GitHub para gerenciar e armazenar projetos.
 
 ## Funcionalidades
 - Layout responsivo
 - Hero section
+- Sobre
 - Sessão de serviços
 - Depoimentos
 - Contato
 
-## Tecnologias
+## Tecnologias usadas
 - HTML5
 - CSS3

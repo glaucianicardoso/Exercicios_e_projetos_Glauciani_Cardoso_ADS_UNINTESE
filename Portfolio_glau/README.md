@@ -1,8 +1,8 @@
 # Projeto de Portfólio Pessoal da Glauci
 
-Criação de uma página de portfolio pessoal elaborado na Escola de Programadores Nível 1, da Unintese.
+Criação de uma página de portfólio pessoal elaborado na Escola de Programadores Nível 1, da Unintese.
 
-## Tecnologias usadas neste portfolio
+## Tecnologias usadas neste portfólio
 - HTML5
 - CSS3
 
